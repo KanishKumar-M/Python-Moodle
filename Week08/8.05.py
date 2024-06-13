@@ -1,3 +1,4 @@
+
 Write a program to eliminate the common elements in the given 2 arrays and print only the non-repeating elements and the total number of such non-repeating elements.
 Input Format:
 The first line contains space-separated values, denoting the size of the two arrays in integer format respectively.
@@ -20,3 +21,28 @@ NO SUCH ELEMENTS
 
 
 For example:
+Input
+Result
+
+5 4
+1 2 8 6 5
+2 6 8 10
+1 5 10
+3
+
+a=input()
+d=[]
+b=input()
+c=input()
+b=tuple(b.split(" "))
+c=tuple(c.split(" "))
+for i in b:
+    if i not in c:
+        d.append(i)
+for i in c:
+    if i not in b:
+        d.append(i)
+for i in range(len(d)):
+    print(int(d[i]),end=' ')
+print()
+print(len(d))
